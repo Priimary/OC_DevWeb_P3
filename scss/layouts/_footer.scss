@@ -1,0 +1,43 @@
+footer
+{
+    background-color: #353535;
+}
+.fa-utensils, .fa-handshake-angle
+{
+    font-size: 10px;
+    width: 1px;
+    height: 1px;
+    margin-right: 20px;
+}
+.footer-content
+{
+    width: 90%;
+    margin: auto;
+    color: #ffffff;
+    padding: 20px 0 20px 0;
+        &__heading
+        {
+            font-family: 'Shrikhand';
+            font-weight: lighter;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+        }
+        &__list 
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+            & li
+            {
+                margin: 0 0 2px 0;
+            }
+            & a
+            {
+                font-size: 14px;
+                color: #ffffff;
+                text-decoration: none;
+                margin: 0;
+            }
+}
+

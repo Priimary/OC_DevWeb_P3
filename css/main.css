@@ -1,0 +1,125 @@
+body {
+  font-family: Roboto;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  width: 40%;
+  margin: 20px 0 20px 0;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  font-size: 10px;
+  width: 1px;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.footer-content {
+  width: 90%;
+  margin: auto;
+  color: #ffffff;
+  padding: 20px 0 20px 0;
+}
+
+.footer-content__heading {
+  font-family: 'Shrikhand';
+  font-weight: lighter;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.footer-content__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content li {
+  margin: 0 0 2px 0;
+}
+
+.footer-content a {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0;
+}
+
+.restaurant-content__img-container img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.introduction-container {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.introduction-container__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #eaeaea;
+  -webkit-box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.introduction-container__location p {
+  margin: 15px;
+}
+
+.introduction-container__heading {
+  margin: 40px 20% 10px 20%;
+}
+
+.introduction-container__byline {
+  margin: 0 10% 20px 10%;
+  font-weight: lighter;
+}
+
+.introduction-container__btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 20px 15px 20px;
+  margin-bottom: 50px;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(51%, #9356DC), to(#9356DC));
+  background-image: linear-gradient(#FF79DA 0%, #9356DC 51%, #9356DC 100%);
+}
+/*# sourceMappingURL=main.css.map */
