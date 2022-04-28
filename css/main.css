@@ -64,7 +64,7 @@ footer {
 
 .restaurant-container {
   background-color: #f6f6f6;
-  padding: 10% 0%;
+  padding: 50px 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +117,7 @@ footer {
 
 .restaurant-content__img-container p {
   position: absolute;
-  right: 8%;
+  right: 35px;
   padding: 5px 10px 5px 10px;
   text-align: center;
   color: #278870;
@@ -132,9 +132,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 25%;
 }
 
@@ -146,6 +143,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
 }
 
 .restaurant-content__heading-content h3 {
@@ -160,9 +158,33 @@ footer {
 }
 
 .fa-heart {
-  margin-right: 30px;
-  font-size: 25px;
-  color: #9356DC;
+  font-size: 35px;
+}
+
+.fa-stack-1x {
+  left: 120px !important;
+  line-height: 0 !important;
+}
+
+.fa-heart-filled {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  color: #FF79DA;
+}
+
+.like-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.like-btn:hover > .fa-heart-filled {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .introduction-container {
@@ -201,11 +223,11 @@ footer {
 }
 
 .introduction-container__heading {
-  margin: 40px 20% 10px 20%;
+  margin: 40px 55px 10px 55px;
 }
 
 .introduction-container__byline {
-  margin: 0 10% 20px 10%;
+  margin: 0 20px 20px 20px;
   font-weight: lighter;
 }
 
@@ -220,8 +242,7 @@ footer {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
 }
 
 .explanations-content {
@@ -256,7 +277,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto 0 4%;
+  margin: 0 auto 0 14px;
   padding: 5px 0 5px 0;
   width: 100%;
   border-radius: 15px;
@@ -280,7 +301,7 @@ footer {
   color: white;
   font-size: 14px;
   position: relative;
-  left: -4%;
+  left: -13px;
 }
 
 .explanations-content__list-content {
