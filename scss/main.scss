@@ -3,6 +3,7 @@
 @import "./base/base";
 @import "./layouts/header";
 @import "./layouts/footer";
-@import "./pages/restaurant-card";
-@import "./pages/introduction";
-@import "./pages/explanations";
+@import "./layouts/loading-spinner";
+@import "./pages/index-introduction";
+@import "./pages/index-explanations";
+@import "./pages/index-restaurant";
