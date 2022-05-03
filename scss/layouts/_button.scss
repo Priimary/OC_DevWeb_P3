@@ -1,0 +1,35 @@
+.primary-btn
+{
+    font-size: 18px;
+    color: #fff;
+    box-shadow: 0 0 32px rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-image: linear-gradient(170deg, $secondary-colour 0%, $primary-colour 70%, $primary-colour 100%);
+}
+.like-btn
+{
+    position: absolute;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #f6f6f6;
+    cursor: pointer;
+    line-height: 0;
+        & .fa-heart
+        {
+            font-size: 30px;
+        }
+        & .fa-heart-filled
+        {
+            transform: scale(0);
+            color: $secondary-colour;
+        }
+        &:hover > .fa-heart-filled
+        {
+            transform: scale(1);
+            transition: 2s;
+        }
+}

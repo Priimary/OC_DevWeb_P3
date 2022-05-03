@@ -20,24 +20,16 @@
         }
         &__heading
         {
-            margin: 40px 55px 10px 55px;
+            margin: 40px 65px 10px 65px;
         }
         &__byline
         {
-            margin: 0 20px 20px 20px;
+            margin: 0 30px 20px 30px;
             font-weight: lighter;
         }
         &__btn
         {
-            font-size: 14px;
-            font-weight: bold;
             padding: 15px 20px 15px 20px;
             margin-bottom: 50px;
-            color: #ffffff;
-            box-shadow: 0 0 32px rgba(0,0,0,0.4);
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            background-image: linear-gradient(170deg, $secondary-colour 0%, $primary-colour 70%, $primary-colour 100%);
         }
 }

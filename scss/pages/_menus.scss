@@ -1,0 +1,121 @@
+.menus-preview-img
+{
+    width: 100%;
+    object-fit: cover;
+}
+.menus
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -55px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    background-color: #f6f6f6;
+        &__heading
+        {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+                & h1
+                {
+                    font-family: 'Shrikhand';
+                    font-weight: 100;
+                    font-size: 26px;
+                }
+        }
+        &__submit-cart-btn
+        {
+            padding: 15px 60px 15px 60px;
+            margin: 50px 0;
+        }
+}
+.menus__entries
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+        & h2
+        {
+            margin: 20px 0 5px 0;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 16px;
+            position: relative;
+        }
+        & h2::after
+        {
+            content: "";
+            background-color: $tertiary-colour;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 40px;
+        }
+        &-line
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            padding-left: 10px;
+        }
+        &-heading
+        {
+            display: flex;
+            flex-direction: column;
+            text-overflow: ellipsis;
+            width: 70%;
+            flex-grow: 1;
+        }
+        &-heading h3
+        {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &-heading p
+        {
+            margin: 0;
+            font-weight: 300;
+            font-size: 16px;
+        }
+        &-price
+        {
+            align-self: flex-end;
+            text-align: center;
+            font-weight: bold;
+            width: 10%;
+        }
+        &-add-btn
+        {
+            background-color: $tertiary-colour;
+            height: 100%;
+            width: 20%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        &-add-to-cart-btn
+        {
+            background-color: white;
+            border: none;
+            align-self: center;
+            cursor: pointer;
+            color: $tertiary-colour;
+                & .fa-circle-check
+                {
+                    font-size: 24px;
+                }
+        }
+}

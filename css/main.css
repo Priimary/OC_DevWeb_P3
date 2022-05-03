@@ -208,6 +208,45 @@ footer {
   }
 }
 
+.primary-btn {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
+}
+
+.like-btn {
+  position: absolute;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.like-btn .fa-heart {
+  font-size: 30px;
+}
+
+.like-btn .fa-heart-filled {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  color: #FF79DA;
+}
+
+.like-btn:hover > .fa-heart-filled {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 .introduction-container {
   background-color: #f6f6f6;
   display: -webkit-box;
@@ -244,26 +283,17 @@ footer {
 }
 
 .introduction-container__heading {
-  margin: 40px 55px 10px 55px;
+  margin: 40px 65px 10px 65px;
 }
 
 .introduction-container__byline {
-  margin: 0 20px 20px 20px;
+  margin: 0 30px 20px 30px;
   font-weight: lighter;
 }
 
 .introduction-container__btn {
-  font-size: 14px;
-  font-weight: bold;
   padding: 15px 20px 15px 20px;
   margin-bottom: 50px;
-  color: #ffffff;
-  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
 }
 
 .explanations-content {
@@ -433,33 +463,162 @@ footer {
   font-weight: 300;
 }
 
-.fa-heart {
-  font-size: 35px;
+.menus-preview-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.fa-stack-1x {
-  left: 120px !important;
-  line-height: 0 !important;
-}
-
-.fa-heart-filled {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  color: #FF79DA;
-}
-
-.like-btn {
-  width: 30px;
-  height: 30px;
-  border: none;
+.menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -55px;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
   background-color: #f6f6f6;
-  cursor: pointer;
 }
 
-.like-btn:hover > .fa-heart-filled {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 2s;
-  transition: 2s;
+.menus__heading {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menus__heading h1 {
+  font-family: 'Shrikhand';
+  font-weight: 100;
+  font-size: 26px;
+}
+
+.menus__submit-cart-btn {
+  padding: 15px 60px 15px 60px;
+  margin: 50px 0;
+}
+
+.menus__entries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  margin: auto;
+}
+
+.menus__entries h2 {
+  margin: 20px 0 5px 0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+.menus__entries h2::after {
+  content: "";
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 40px;
+}
+
+.menus__entries-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+}
+
+.menus__entries-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-overflow: ellipsis;
+  width: 70%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menus__entries-heading h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menus__entries-heading p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.menus__entries-price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  font-weight: bold;
+  width: 10%;
+}
+
+.menus__entries-add-btn {
+  background-color: #99E2D0;
+  height: 100%;
+  width: 20%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menus__entries-add-to-cart-btn {
+  background-color: white;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  color: #99E2D0;
+}
+
+.menus__entries-add-to-cart-btn .fa-circle-check {
+  font-size: 24px;
 }
 /*# sourceMappingURL=main.css.map */
