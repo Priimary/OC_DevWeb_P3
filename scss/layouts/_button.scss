@@ -11,17 +11,12 @@
 .like-btn
 {
     position: absolute;
-    right: 45px;
     width: 30px;
     height: 30px;
     border: none;
     background-color: #f6f6f6;
     cursor: pointer;
     line-height: 0;
-        & .fa-heart
-        {
-            font-size: 30px;
-        }
         & .fa-heart-filled
         {
             transform: scale(0);

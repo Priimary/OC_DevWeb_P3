@@ -51,6 +51,11 @@
             display: flex;
             align-items: center;
             height: 25%;
+                & .like-btn
+                {
+                    right: 45px;
+                    font-size: 30px;
+                }
         }
         &__heading-content
         {

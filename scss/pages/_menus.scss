@@ -25,6 +25,11 @@
                     font-weight: 100;
                     font-size: 26px;
                 }
+                & .like-btn
+                {
+                    right: 32px;
+                    font-size: 30px;
+                }
         }
         &__submit-cart-btn
         {
@@ -71,51 +76,62 @@
         }
         &-heading
         {
-            display: flex;
-            flex-direction: column;
             text-overflow: ellipsis;
-            width: 70%;
-            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            flex: 5;
         }
         &-heading h3
         {
             margin: 0 0 5px 0;
             font-size: 18px;
             font-weight: 500;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         &-heading p
         {
             margin: 0;
             font-weight: 300;
             font-size: 16px;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         &-price
         {
             align-self: flex-end;
             text-align: center;
             font-weight: bold;
-            width: 10%;
+            flex: 1;
         }
-        &-add-btn
+        &-btn-container
         {
             background-color: $tertiary-colour;
+            position: relative;
             height: 100%;
-            width: 20%;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             display: flex;
+            flex: 1;
             justify-content: center;
-        }
-        &-add-to-cart-btn
-        {
-            background-color: white;
-            border: none;
-            align-self: center;
-            cursor: pointer;
-            color: $tertiary-colour;
+                & button
+                {
+                    border: none;
+                    align-self: center;
+                    cursor: pointer;
+                }
                 & .fa-circle-check
                 {
                     font-size: 24px;
+                    line-height: 0;
+                }
+                & .circle-check-filled
+                {
+                    color: #fff;
+                }
+                & .circle-check-outline
+                {
+                    color: $tertiary-colour;
                 }
         }
 }

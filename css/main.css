@@ -221,17 +221,12 @@ footer {
 
 .like-btn {
   position: absolute;
-  right: 45px;
   width: 30px;
   height: 30px;
   border: none;
   background-color: #f6f6f6;
   cursor: pointer;
   line-height: 0;
-}
-
-.like-btn .fa-heart {
-  font-size: 30px;
 }
 
 .like-btn .fa-heart-filled {
@@ -441,6 +436,11 @@ footer {
   height: 25%;
 }
 
+.restaurant-content__heading-container .like-btn {
+  right: 45px;
+  font-size: 30px;
+}
+
 .restaurant-content__heading-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,6 +504,11 @@ footer {
   font-size: 26px;
 }
 
+.menus__heading .like-btn {
+  right: 32px;
+  font-size: 30px;
+}
+
 .menus__submit-cart-btn {
   padding: 15px 60px 15px 60px;
   margin: 50px 0;
@@ -560,30 +565,28 @@ footer {
 }
 
 .menus__entries-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-overflow: ellipsis;
-  width: 70%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
 }
 
 .menus__entries-heading h3 {
   margin: 0 0 5px 0;
   font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menus__entries-heading p {
   margin: 0;
   font-weight: 300;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menus__entries-price {
@@ -591,34 +594,46 @@ footer {
       align-self: flex-end;
   text-align: center;
   font-weight: bold;
-  width: 10%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.menus__entries-add-btn {
+.menus__entries-btn-container {
   background-color: #99E2D0;
+  position: relative;
   height: 100%;
-  width: 20%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.menus__entries-add-to-cart-btn {
-  background-color: white;
+.menus__entries-btn-container button {
   border: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   cursor: pointer;
-  color: #99E2D0;
 }
 
-.menus__entries-add-to-cart-btn .fa-circle-check {
+.menus__entries-btn-container .fa-circle-check {
   font-size: 24px;
+  line-height: 0;
+}
+
+.menus__entries-btn-container .circle-check-filled {
+  color: #fff;
+}
+
+.menus__entries-btn-container .circle-check-outline {
+  color: #99E2D0;
 }
 /*# sourceMappingURL=main.css.map */
