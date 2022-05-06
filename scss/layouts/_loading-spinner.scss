@@ -26,7 +26,7 @@
     height: $size-spinner;
     transform: scalex(0);
     animation: display-loading-spinner 3s;
-    animation: loading-spinner 1s linear 3;
+    animation: complete-turn 1s linear 3;
         &__inner-1, &__inner-2, &__inner-3
         {
             position: absolute;
@@ -51,7 +51,7 @@
             background: #fff;  
         }
 }
-@keyframes loading-spinner
+@keyframes complete-turn
 {
     0%
     { 

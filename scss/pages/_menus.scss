@@ -1,15 +1,15 @@
 .menus-preview-img
 {
+    position: relative;
+    z-index: -1;
+    margin-bottom: -50px;
     width: 100%;
-    object-fit: cover;
 }
 .menus
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -55px;
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
     background-color: #f6f6f6;
@@ -73,13 +73,14 @@
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             padding-left: 10px;
+            cursor: pointer;
         }
         &-heading
         {
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            flex: 5;
+            width: 300px;
         }
         &-heading h3
         {
@@ -102,28 +103,31 @@
             align-self: flex-end;
             text-align: center;
             font-weight: bold;
-            flex: 1;
+            line-height: 70%;
+            width: 50px;
         }
         &-btn-container
         {
             background-color: $tertiary-colour;
-            position: relative;
             height: 100%;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             display: flex;
-            flex: 1;
             justify-content: center;
+            width: 70px;
+            z-index: -1;
+            transform: translate(200%);  
+            width: 0;        
                 & button
                 {
                     border: none;
                     align-self: center;
-                    cursor: pointer;
                 }
                 & .fa-circle-check
                 {
                     font-size: 24px;
                     line-height: 0;
+                    cursor: pointer;
                 }
                 & .circle-check-filled
                 {
@@ -134,4 +138,31 @@
                     color: $tertiary-colour;
                 }
         }
+        &-line:hover > &-btn-container
+        {
+            animation: slide-in 0.5s linear forwards;
+        }
+        &-line:hover > &-btn-container .fa-circle-check
+        {
+            animation: complete-turn 1s;
+        }
+}
+@keyframes slide-in
+{
+    0%
+    {
+        transform: translate(200%);
+        z-index: -1;
+        width: 0;
+    }
+    30%
+    {
+        z-index: -1;
+    }
+    100%
+    {
+        transform: translate(0);
+        z-index: 1;
+        width: 80px;
+    }
 }
