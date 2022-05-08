@@ -15,6 +15,7 @@
     background-color: #f6f6f6;
         &__heading
         {
+            position: relative;
             width: 90%;
             margin: auto;
             display: flex;
@@ -23,11 +24,13 @@
                 {
                     font-family: 'Shrikhand';
                     font-weight: 100;
-                    font-size: 26px;
+                    font-size: 28px;
+                    margin-bottom: 0;
                 }
                 & .like-btn
                 {
-                    right: 32px;
+                    right: 15px;
+                    bottom: 10px;
                     font-size: 30px;
                 }
         }
@@ -74,6 +77,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             padding-left: 10px;
             cursor: pointer;
+            animation: delayed-top-to-bottom-render 2s forwards;
         }
         &-heading
         {
@@ -105,6 +109,7 @@
             font-weight: bold;
             line-height: 70%;
             width: 50px;
+            margin: 0 10px;
         }
         &-btn-container
         {
@@ -116,7 +121,7 @@
             justify-content: center;
             width: 70px;
             z-index: -1;
-            transform: translate(200%);  
+            opacity: 0;
             width: 0;        
                 & button
                 {
@@ -151,18 +156,37 @@
 {
     0%
     {
-        transform: translate(200%);
+        transform: translatex(200%);
         z-index: -1;
         width: 0;
     }
     30%
     {
         z-index: -1;
+        opacity: 0;
     }
     100%
     {
-        transform: translate(0);
+        transform: translatex(0);
         z-index: 1;
-        width: 80px;
+        width: 82px;
+        opacity: 1;
+    }
+}
+@keyframes delayed-top-to-bottom-render
+{
+    0%
+    {
+        opacity: 0;
+    }
+    70%
+    {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
