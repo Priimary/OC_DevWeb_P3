@@ -4,6 +4,11 @@
     z-index: -1;
     margin-bottom: -50px;
     width: 100%;
+    @include tablet-only
+    {
+        height: 300px;
+        object-fit: cover;
+    }
 }
 .menus
 {
@@ -32,6 +37,10 @@
                     right: 15px;
                     bottom: 10px;
                     font-size: 30px;
+                    @include tablet-only
+                    {
+                        right: 20px;
+                    }
                 }
         }
         &__submit-cart-btn
@@ -77,14 +86,16 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             padding-left: 10px;
             cursor: pointer;
-            animation: delayed-top-to-bottom-render 2s forwards;
+            overflow: hidden;
+            opacity: 0;
+            animation: delayed-render 1s ease-in forwards;
         }
         &-heading
         {
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            width: 300px;
+            flex: 1;
         }
         &-heading h3
         {
@@ -120,9 +131,9 @@
             display: flex;
             justify-content: center;
             width: 70px;
-            z-index: -1;
-            opacity: 0;
-            width: 0;        
+            margin-right: -70px;
+            transform: translatex(100%);
+            transition: transform 0.5s ease-in 0.5s, margin 0.5s ease-in; 
                 & button
                 {
                     border: none;
@@ -131,8 +142,8 @@
                 & .fa-circle-check
                 {
                     font-size: 24px;
-                    line-height: 0;
                     cursor: pointer;
+                    line-height: 0;
                 }
                 & .circle-check-filled
                 {
@@ -145,35 +156,16 @@
         }
         &-line:hover > &-btn-container
         {
-            animation: slide-in 0.5s linear forwards;
+            transition: transform 0.5s, margin 0.5s ease-in;
+            margin: 0;
+            transform: translate(0%);
         }
         &-line:hover > &-btn-container .fa-circle-check
         {
             animation: complete-turn 1s;
         }
 }
-@keyframes slide-in
-{
-    0%
-    {
-        transform: translatex(200%);
-        z-index: -1;
-        width: 0;
-    }
-    30%
-    {
-        z-index: -1;
-        opacity: 0;
-    }
-    100%
-    {
-        transform: translatex(0);
-        z-index: 1;
-        width: 82px;
-        opacity: 1;
-    }
-}
-@keyframes delayed-top-to-bottom-render
+@keyframes delayed-render
 {
     0%
     {

@@ -8,6 +8,10 @@ footer
     width: 1px;
     height: 1px;
     margin-right: 20px;
+    @include desktop-only
+    {
+        font-size: 16px;
+    }
 }
 .footer-content
 {
@@ -15,12 +19,23 @@ footer
     margin: auto;
     color: #ffffff;
     padding: 20px 0 20px 0;
+    @include desktop-only
+    {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
         &__heading
         {
             font-family: 'Shrikhand';
             font-weight: lighter;
             font-size: 14px;
             margin: 0 0 10px 0;
+            @include desktop-only
+            {
+                font-size: 24px;
+            }
         }
         &__list 
         {
@@ -38,6 +53,10 @@ footer
                 color: #ffffff;
                 text-decoration: none;
                 margin: 0;
+                @include desktop-only
+                {
+                    font-size: 16px;
+                }
             }
 }
 

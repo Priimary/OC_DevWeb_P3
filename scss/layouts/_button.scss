@@ -8,6 +8,10 @@
     cursor: pointer;
     background-image: linear-gradient(170deg, $secondary-colour 0%, $primary-colour 70%, $primary-colour 100%);
 }
+.primary-btn:hover
+{
+    background-image: linear-gradient(170deg, lighten($secondary-colour,5%) 0%, lighten($primary-colour,5%) 70%, lighten($primary-colour,5%) 100%);
+}
 .like-btn
 {
     position: absolute;

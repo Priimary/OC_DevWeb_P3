@@ -21,11 +21,19 @@
         &__heading
         {
             margin: 40px 65px 10px 65px;
+            @include desktop-only
+            {
+                font-size: 32px;
+            }
         }
         &__byline
         {
             margin: 0 30px 20px 30px;
             font-weight: lighter;
+            @include desktop-only
+            {
+                font-size: 20px;
+            }
         }
         &__btn
         {

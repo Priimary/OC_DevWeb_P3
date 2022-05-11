@@ -1,6 +1,7 @@
 .index-page
 {
     animation: delayed-display-page 3s;
+    transform-origin: top;
 }
 @keyframes delayed-display-page
 {
@@ -48,7 +49,7 @@
             left: $offset-spinner;
             width: $size-spinner - ($offset-spinner * 2);
             height: $size-spinner - ($offset-spinner * 2);
-            background: #fff;  
+            background: #fff; 
         }
 }
 @keyframes complete-turn
