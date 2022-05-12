@@ -9,6 +9,11 @@
         height: 300px;
         object-fit: cover;
     }
+    @include desktop-only
+    {
+        margin-bottom: 0;
+        height: 500px;
+    }
 }
 .menus
 {
@@ -18,6 +23,10 @@
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
     background-color: #f6f6f6;
+    @include desktop-only
+    {
+        border-radius: 0;
+    }
         &__heading
         {
             position: relative;
@@ -25,12 +34,20 @@
             margin: auto;
             display: flex;
             align-items: center;
+            @include desktop-only
+            {
+                width: 80%;
+            }
                 & h1
                 {
                     font-family: 'Shrikhand';
                     font-weight: 100;
                     font-size: 28px;
                     margin-bottom: 0;
+                    @include desktop-only
+                    {
+                        font-size: 32px;
+                    }
                 }
                 & .like-btn
                 {
@@ -42,6 +59,18 @@
                         right: 20px;
                     }
                 }
+        }
+        &__entries-container
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include desktop-only
+            {
+                flex-direction: row;
+                width: 80%;
+                gap: 20px;
+            }
         }
         &__submit-cart-btn
         {
@@ -56,6 +85,10 @@
     gap: 15px;
     width: 90%;
     margin: auto;
+    @include desktop-only
+    {
+        margin: 0;
+    }
         & h2
         {
             margin: 20px 0 5px 0;
