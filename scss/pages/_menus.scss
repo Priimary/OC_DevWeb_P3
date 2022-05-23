@@ -198,6 +198,14 @@
             animation: complete-turn 1s;
         }
 }
+.delay-1
+{
+    animation-delay: 0.25s;
+}
+.delay-2
+{
+    animation-delay: 0.5s;
+}
 @keyframes delayed-render
 {
     0%

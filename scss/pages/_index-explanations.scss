@@ -10,6 +10,11 @@
         &__heading
         {
             padding-top: 20px;
+            @include tablet-only
+            {
+                display: flex;
+                justify-content: center;
+            }
             @include desktop-only
             {
                 font-size: 32px;
@@ -29,7 +34,9 @@
             list-style-type: none;
             @include tablet-only
             {
-                width: 50%;
+                width: 40%;
+                justify-content: center;
+                margin: auto;
             }
             @include desktop-only
             {
@@ -47,10 +54,15 @@
             border-radius: 15px;
             background-color: #f6f6f6;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
         }
-        &__list-line--eyecatch
+        &__list-line:hover
         {
             background-color: lighten($primary-colour,35%);
+        }
+        &__list-line:hover > .fa-solid
+        {
+            color: $primary-colour;
         }
         &__list-nbr
         {
@@ -75,8 +87,4 @@
 {
     color: grey;
     width: 10%;
-}
-.fa-store
-{
-    color: $primary-colour;
 }

@@ -20,7 +20,7 @@
 }
 .spinner-container
 {
-    position: absolute;
+    position: fixed;
     top: calc(50% - #{$size-spinner / 2});
     left: calc(50% - #{$size-spinner / 2});
     width: $size-spinner;
