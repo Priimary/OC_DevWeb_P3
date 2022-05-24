@@ -34,6 +34,7 @@
 }
 .restaurant-card
 {
+    position: relative;
     width: 90%;
     height: 250px;
     margin: auto;
@@ -72,17 +73,22 @@
                     background-color: $tertiary-colour;
                 }
         }
+        & .like-btn
+        {
+            bottom: 20px;
+            right: 35px;
+            font-size: 30px;
+        }
+        & .like-btn-appearance
+        {
+            bottom: 15px;
+            right: 30px;
+        }
         &__heading-container
         {
             display: flex;
             align-items: center;
-            position: relative;
-            height: 25%;
-                & .like-btn
-                {
-                    right: 25px;
-                    font-size: 30px;
-                }
+            height: 25%;     
         }
         &__heading-content
         {
