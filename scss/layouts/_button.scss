@@ -19,11 +19,11 @@
     height: 30px;
     border: none;
     background-color: #f6f6f6;
-    cursor: pointer;
         & .fa-heart-filled
         {
             transform: scale(0);
             color: $secondary-colour;
+            transition: transform 2s;
         }
 }
 .like-btn-appearance
@@ -33,6 +33,7 @@
     z-index: 1;
     width: 30px;
     height: 30px;
+    cursor: pointer;
         &:checked + .like-btn > .fa-heart-filled
         {
             transform: scale(1);

@@ -283,13 +283,16 @@ footer {
   height: 30px;
   border: none;
   background-color: #f6f6f6;
-  cursor: pointer;
 }
 
 .like-btn .fa-heart-filled {
   -webkit-transform: scale(0);
           transform: scale(0);
   color: #FF79DA;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 .like-btn-appearance {
@@ -298,6 +301,7 @@ footer {
   z-index: 1;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .like-btn-appearance:checked + .like-btn > .fa-heart-filled {
@@ -827,6 +831,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   height: 70px;
   background-color: #fff;
   border-radius: 15px;
@@ -875,6 +880,31 @@ footer {
   margin: 0 10px;
 }
 
+.menus__entries-checkbox-input {
+  position: absolute;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.menus__entries-checkbox-input:checked + .menus__entries-btn-container {
+  -webkit-transition: margin 0.5s ease-in, -webkit-transform 0.5s;
+  transition: margin 0.5s ease-in, -webkit-transform 0.5s;
+  transition: transform 0.5s, margin 0.5s ease-in;
+  transition: transform 0.5s, margin 0.5s ease-in, -webkit-transform 0.5s;
+  margin: 0;
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+.menus__entries-checkbox-input:checked + .menus__entries-btn-container .fa-circle-check {
+  -webkit-animation: complete-turn 1s;
+          animation: complete-turn 1s;
+}
+
 .menus__entries-btn-container {
   background-color: #99E2D0;
   height: 100%;
@@ -915,21 +945,6 @@ footer {
 
 .menus__entries-btn-container .circle-check-outline {
   color: #99E2D0;
-}
-
-.menus__entries-line:hover > .menus__entries-btn-container {
-  -webkit-transition: margin 0.5s ease-in, -webkit-transform 0.5s;
-  transition: margin 0.5s ease-in, -webkit-transform 0.5s;
-  transition: transform 0.5s, margin 0.5s ease-in;
-  transition: transform 0.5s, margin 0.5s ease-in, -webkit-transform 0.5s;
-  margin: 0;
-  -webkit-transform: translate(0%);
-          transform: translate(0%);
-}
-
-.menus__entries-line:hover > .menus__entries-btn-container .fa-circle-check {
-  -webkit-animation: complete-turn 1s;
-          animation: complete-turn 1s;
 }
 
 .delay-1 {
